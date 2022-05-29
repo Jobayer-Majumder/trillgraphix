@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Banner from '../Components/Header/Banner/Banner';
+import Header from '../Components/Header/Header';
 import Navbar from '../Components/Header/Navbar/Navbar';
 
 
@@ -13,8 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-      <Banner />
+      <Header />
       
     </div>
   )

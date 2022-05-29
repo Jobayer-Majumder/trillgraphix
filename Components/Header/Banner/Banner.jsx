@@ -1,9 +1,11 @@
 import React from 'react';
 
+
+
 const Banner = () => {
     return (
-        <div>
-            <h2>this is banner section</h2>
+        <div className='h-4/5'>
+            <h2>this is banner</h2>
         </div>
     );
 };

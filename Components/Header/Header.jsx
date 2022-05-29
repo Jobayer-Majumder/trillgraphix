@@ -8,7 +8,8 @@ const headerStyle = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: '550px'
+    height: '540px',
+    boxShadow: "0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.7)"
 
 }
 

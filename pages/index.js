@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Banner from '../Components/Header/Banner/Banner';
+import Footer from '../Components/Footer/Footer';
+import Gallery from '../Components/Gallery/Gallery';
 import Header from '../Components/Header/Header';
-import Navbar from '../Components/Header/Navbar/Navbar';
 
 
 
@@ -14,8 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      
+      <main className='bg-black'>
+        <Header />
+        <Gallery />
+        <Footer />
+      </main>
     </div>
   )
 }

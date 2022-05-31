@@ -6,13 +6,15 @@ import Navbar from '../../Components/Header/Navbar/Navbar';
 
 
 const Animation = () => {
+    const paths = galleryData.animation.map(d => ({params: { id: d.id.toString() }}))
+    console.log(typeof(paths[0].params.id))
+    typeof(paths[0].params.id)
+
     return (
         <section className='bg-black'>
             <Navbar />
 
-            <h2>this is animation page</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 pt-36">
                 {
                     galleryData.animation.map((d, i) =>
                         <div key={i}>

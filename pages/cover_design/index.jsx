@@ -9,7 +9,7 @@ const cover_design = () => {
         <section className='bg-black'>
             <Navbar />
 
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 pt-36">
                 {
                     galleryData.cover.map((d, i) =>
                         <div key={i}>

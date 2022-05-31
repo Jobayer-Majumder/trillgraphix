@@ -2,56 +2,56 @@ import React from 'react';
 import { galleryData } from '../../Components/Gallery/GalleryData';
 
 
-// export const getStaticPath = async () => {
-//     const path = await galleryData.animation.map(d => {
-//         return {
-//             params: {id: d.id.toString()}
-//         }
-//     })
+// export async function getStaticPath() {
+//   const paths = [
+//     '2',
+//     '1'
+//   ]
 
-//     return {
-//         path,
-//         fallback: false
-//     }
-// }; 
+//   return {
+//     paths,
+//     fallback: false
+//   }
+// };
 
-// export const getStaticProps = async (context) => {
-//     const id = context.params.id;
+// export async function getStaticProps(context){
+//   const id = context.params.id;
 
-//     const singleData = galleryData.animation.map(d => d.id === id);
+//   const singleData = await galleryData.animation.map(d => d.id === id);
 
-//     return {
-//         props: {animation: singleData}
-//     }
+//   return {
+//     props: { animation: singleData }
+//   }
 // }
 
 
 export async function getStaticPaths() {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
     const users = await res.json()
-  
+
     const paths = users.map((user) => ({
       params: { id: user.id.toString() },
     }))
-  
+
     return { paths, fallback: false }
   }
-  
-  
+
+
   export async function getStaticProps({ params }) {
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
     const user = await res.json()
-  
+    // const user = galleryData.animation.map(d => d.id === params.id);
+
     return { props: { user } }
   }
 
-const AnimationDetails = ({user}) => {
-    console.log(user)
-    return (
-        <section>
-            <h2>this is animation details</h2>
-        </section>
-    );
+const AnimationDetails = ({ user }) => {
+  console.log(user)
+  return (
+    <section>
+      <h2>this is animation details</h2>
+    </section>
+  );
 };
 
 export default AnimationDetails;

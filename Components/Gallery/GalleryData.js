@@ -22,7 +22,7 @@ export const galleryData = {
             subTitle: 'Youngboy Never Broke Again',
             category: 'Album Cover',
             description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
-            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1642129871013-A3SZDWTRHMR1I59TFPDR/Realer+Official.jpg?format=750w'
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1642129713524-93FACAY5AWRIAWALWZ86/Colors.jpg?format=500w'
         },
         {
             id: 4,
@@ -124,7 +124,39 @@ export const galleryData = {
             subTitle: 'TRL4EVA',
             category: 'IG FEED MOTION COVER',
             description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
-            video: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1642131341287-4AA86FTT6LBW8V4NV8QM/Green+Dot+v2.jpg?format=750w'
-        }
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/f01a6f52-5683-4838-956e-36d6ed47ffac/back.jpg?format=1000w'
+        },
+        {
+            id: 2,
+            title: 'Varsity Jacket',
+            subTitle: 'TRL4EVA',
+            category: 'IG FEED MOTION COVER',
+            description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1643532485437-0KEDQAJNNN4GGDJ6VVSO/2.jpg?format=1000w'
+        },
+        {
+            id: 3,
+            title: 'Varsity Jacket',
+            subTitle: 'TRL4EVA',
+            category: 'IG FEED MOTION COVER',
+            description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/d8e1fa57-d17c-4e1e-a125-871418cc5cb5/8.jpg?format=1000w'
+        },
+        {
+            id: 4,
+            title: 'Varsity Jacket',
+            subTitle: 'TRL4EVA',
+            category: 'IG FEED MOTION COVER',
+            description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1644439151177-62WRCRJ7D5NMBQD9GVZ0/Layer+4.jpg?format=1000w'
+        },
+        {
+            id: 5,
+            title: 'Varsity Jacket',
+            subTitle: 'TRL4EVA',
+            category: 'IG FEED MOTION COVER',
+            description: 'The project’s name, Realer, is used to express that the artist feels as if he is realer than everyone else. For the artwork, I played off of the title and used phrases related to the artist in the background.',
+            img: 'https://images.squarespace-cdn.com/content/v1/6181566fb79b7919a2b9943f/1644439832132-30U9JAH7AB5TJPBYX5FZ/Layer+5.jpg?format=1000w'
+        },
     ]
 }

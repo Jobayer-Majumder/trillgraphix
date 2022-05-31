@@ -5,7 +5,7 @@ import { FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="flex justify-center w-full items-center py-24" id="mobile-menu-2">
+        <footer className="bg-black flex justify-center w-full items-center py-24" id="mobile-menu-2">
             <ul className="flex space-x-3">
                 <li>
                     <a href="#" className="block mt-1 text-white dark:text-white">

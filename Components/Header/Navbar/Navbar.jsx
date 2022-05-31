@@ -25,7 +25,7 @@ const Navbar = () => {
                     <div className={`hidden md:flex md:justify-end ${route === '/clothing_design' ? 'text-black' : 'text-white' } w-full items-center`} id="mobile-menu-2">
                         <ul className="flex space-x-8">
                             <li className='relative'>
-                                <a href="#" className=" dark:text-white" aria-current="page">Portfolio</a>
+                                <Link href="cover_design" className=" dark:text-white" aria-current="page">Portfolio</Link>
                                 {/* <div className="absolute top-10 space-y-2 text-right">
                                     <li>
                                         <a href="#" className="text-white dark:text-white" aria-current="page">Cover art</a>
@@ -43,6 +43,9 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <a href="#" className="block">inquire</a>
+                            </li>
+                            <li>
+                                <Link href="/shopping_cart" className="block">cart</Link>
                             </li>
                             <li>
                                 <a href="#" className="block mt-1">

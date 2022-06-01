@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <a href="#" className="block">Clientele</a>
                             </li>
                             <li>
-                                <a href="#" className="block">inquire</a>
+                                <Link href="/contact" className="block">inquire</Link>
                             </li>
                             <li>
                                 <Link href="/shopping_cart" className="block">cart</Link>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { BsPlus } from 'react-icons/bs';
+import { HiOutlineMinusSm } from 'react-icons/hi';
+import { AiFillDelete } from 'react-icons/ai';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Header/Navbar/Navbar';
 import useForm from '../../hooks/useForm';
@@ -13,14 +16,20 @@ const url = 'https://countriesnow.space/api/v0.1/countries';
 const ShoppingCart = () => {
     const { inputValue, inputErr, handleInputValidation } = useForm()
     const [countries, setCountries] = useState(false)
+    const [quantity, setQuantity] = useState(1);
 
 
+    const decreaseQuantity = () => {
+      if (quantity > 1) {
+        setQuantity(quantity - 1)
+      }
+    };
 
     useEffect(() => {
         fetch(url)
-        .then(res => res.json())
-        .then(data => setCountries(data))
-        .catch(err => console.error('error:' + err));
+            .then(res => res.json())
+            .then(data => setCountries(data))
+            .catch(err => console.error('error:' + err));
     }, [])
 
     console.log(inputValue)
@@ -43,12 +52,16 @@ const ShoppingCart = () => {
                                     <p className=''>cover design</p>
                                 </div>
                             </div>
-                            <div className="flex justify-around items-center py-4 md:py-0">
+                            <div className="flex justify-between md:justify-around items-center py-4 md:py-0">
                                 <div className="">
-                                    <h2> - 1 + </h2>
+                                    <button onClick={decreaseQuantity} className='ring ring-gray-700 focus:ring-gray-400 rounded-full p-2'>< HiOutlineMinusSm /></button>
+                                    <span className='px-3'>{quantity}</span>
+                                    <button onClick={() => setQuantity(quantity + 1)} className='ring ring-gray-700 focus:ring-gray-400 rounded-full p-2'> <BsPlus /></button>
                                 </div>
                                 <h2>$50</h2>
-                                <h6>x</h6>
+                                <button title='Remove' className="text-xl text-red-500 hover:text-red-600">
+                                    <AiFillDelete />
+                                </button>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-700 pb-2 mb-2">
@@ -59,12 +72,16 @@ const ShoppingCart = () => {
                                     <p className=''>cover design</p>
                                 </div>
                             </div>
-                            <div className="flex justify-around items-center py-4 md:py-0">
+                            <div className="flex justify-between md:justify-around items-center py-4 md:py-0">
                                 <div className="">
-                                    <h2> - 1 + </h2>
+                                    <button onClick={decreaseQuantity} className='ring ring-gray-700 focus:ring-gray-400 rounded-full p-2'>< HiOutlineMinusSm /></button>
+                                    <span className='px-3'>{quantity}</span>
+                                    <button onClick={() => setQuantity(quantity + 1)} className='ring ring-gray-700 focus:ring-gray-400 rounded-full p-2'> <BsPlus /></button>
                                 </div>
                                 <h2>$50</h2>
-                                <h6>x</h6>
+                                <button title='Remove' className="text-xl text-red-500 hover:text-red-600">
+                                    <AiFillDelete />
+                                </button>
                             </div>
                         </div>
 
@@ -102,7 +119,7 @@ const ShoppingCart = () => {
                                 <input onChange={(e) => handleInputValidation(e)} name='city' type="text" placeholder='city' className='p-3 rounded text-gray-500 focus:outline-none focus:ring ring-indigo-600' />
                                 <input onChange={(e) => handleInputValidation(e)} name='zip_code' type="text" placeholder='zip code' className='p-2 rounded text-gray-500 focus:outline-none focus:ring ring-indigo-600' />
                             </div>
-                            
+
                             <Link href={'/shopping_cart/checkout'}>
                                 <button className='px-5 py-3 mt-3 bg-indigo-600 hover:bg-indigo-700 transition rounded'>
                                     save & continue

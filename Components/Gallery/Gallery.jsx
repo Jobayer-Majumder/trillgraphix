@@ -9,7 +9,7 @@ const Gallery = () => {
                 {
                     galleryData.cover.map((d, i) => 
                         <div key={i}>
-                            <img src={d.img} alt={d.title} />
+                            <img src={d.file} alt={d.title} />
                         </div>
                     )
                 }
